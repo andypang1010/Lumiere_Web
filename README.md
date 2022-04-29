@@ -1,3 +1,3 @@
-# INFO_1998_Final_Project
+# Lumiere
 
-Andy and Porridge's INFO 1998 Final Project.
+Andy and Porridge's INFO 1998 Final Project for Spring 2022.
