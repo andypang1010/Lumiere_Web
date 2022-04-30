@@ -52,7 +52,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 .card {
@@ -76,7 +76,7 @@
   border-radius: 10px;
   border-color: #C0A080;
   transition: color 0.15s ease, border-color 0.15s ease;
-  width: 30%;
+  width: 100%;
 }
 
 .card:hover,
