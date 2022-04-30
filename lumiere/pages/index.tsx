@@ -21,33 +21,26 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <a href="https://www.imdb.com/title/tt3783958/?ref_=fn_al_tt_1" className={styles.card}>
+          <div className={styles.card}>
             <h2>La La Land &rarr;</h2>
-            <p>Starring: Emma Stone, Ryan Gosling</p>
-          </a>
+          </div>
 
-          <a href="https://www.imdb.com/title/tt2582802/" className={styles.card}>
+          <div className={styles.card}>
             <h2>Whiplash &rarr;</h2>
-            <p>Starring: Miles Teller, J.K. Simmons</p>
-          </a>
+          </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <div className={styles.card}>
+            <h2>A Dog&#39;s Purpose &rarr;</h2>
+          </div>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <div className={styles.card}>
+            <h2>A Quiet Place &rarr;</h2>
+          </div>
+
+          <div className={styles.card}>
+            <h2>Baby Driver &rarr;</h2>
+          </div>
+          
         </div>
       </main>
 
