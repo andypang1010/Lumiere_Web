@@ -24,21 +24,22 @@ const Home: NextPage = () => {
 
         <div className={styles.grid}></div>
         <div className='row'>
-    <div className='col-lg-6'>
-          <div className={styles.watchedCard}>
-            <h2>La La Land &rarr;</h2>
-            </div>
+          <div className='col-lg-6 gx-7'>
+             <div className={styles.watchedCard}>
+               <h2>La La Land &rarr;</h2>
+             </div>
       
-
-          <div className={styles.watchedCard}>
-            <h2>Whiplash &rarr;</h2>
+             <div className={styles.watchedCard}>
+               <h2>Whiplash &rarr;</h2>
+             </div>
           </div>
 
-          <div className={styles.card}>
-            <h2>A Dog&#39;s Purpose</h2>
-          </div></div>
+          <div className='col-lg-6 gx-7'>
+             <div className={styles.card}>
+               <h2>A Dog&#39;s Purpose</h2>
+             </div>
 
-          <div className='col-lg-6'>
+
           <div className={styles.card}>
             <h2>A Quiet Place</h2>
           </div>
