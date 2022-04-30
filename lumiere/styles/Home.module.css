@@ -60,6 +60,7 @@
   padding: 1.5rem;
   text-align: left;
   color: inherit;
+  background-color: #a2a2a2;
   text-decoration: none;
   border-radius: 10px;
   border-color: #a2a2a2;
@@ -71,7 +72,8 @@
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
-  color: #C0A080;
+  color: inherit;
+  background-color: #C0A080;
   text-decoration: none;
   border-radius: 10px;
   border-color: #C0A080;
@@ -82,8 +84,17 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #C0A080;
-  border-color: #C0A080;
+  border-color: rgb(130, 130, 130);
+  background-color: rgb(130, 130, 130);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.watchCard:hover,
+.watchCard:focus,
+.watchCard:active {
+  border-color: #e6be96;
+  background-color: #e6be96;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .card h2 {

@@ -1,6 +1,12 @@
+import { query, collection, doc } from 'firebase/firestore'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { db } from '../util/firebase'
+
+const usersCollection = query(collection(db, 'Users'))
+const moviesCollection = query(collection(db, 'Users/'))
+
 
 const Home: NextPage = () => {
   return (
@@ -17,7 +23,7 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          Welcome, kingbob001
+          Welcome, kingbob1
         </p>
 
         <div className={styles.grid}>
