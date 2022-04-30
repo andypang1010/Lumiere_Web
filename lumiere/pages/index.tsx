@@ -34,11 +34,12 @@ const Home: NextPage = () => {
             <h2>Whiplash &rarr;</h2>
           </div>
 
-          <div className={styles.card}>
-            <h2>A Dog&#39;s Purpose</h2>
-          </div></div>
+          </div>
 
           <div className='col-lg-6'>
+          <div className={styles.card}>
+            <h2>A Dog&#39;s Purpose</h2>
+          </div>
           <div className={styles.card}>
             <h2>A Quiet Place</h2>
           </div>

@@ -64,7 +64,7 @@
   border-radius: 10px;
   border-color: #a2a2a2;
   transition: color 0.15s ease, border-color 0.15s ease;
-  width: 30%;
+  width: 100%;
 }
 
 .watchedCard {
