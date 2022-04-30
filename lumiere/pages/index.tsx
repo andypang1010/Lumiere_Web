@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          Welcome, Default User!
+          Welcome, kingbob001
         </p>
 
         <div className={styles.grid}>
@@ -30,15 +30,15 @@ const Home: NextPage = () => {
           </div>
 
           <div className={styles.card}>
-            <h2>A Dog&#39;s Purpose &rarr;</h2>
+            <h2>A Dog&#39;s Purpose</h2>
           </div>
 
           <div className={styles.card}>
-            <h2>A Quiet Place &rarr;</h2>
+            <h2>A Quiet Place</h2>
           </div>
 
           <div className={styles.card}>
-            <h2>Baby Driver &rarr;</h2>
+            <h2>Baby Driver</h2>
           </div>
           
         </div>
