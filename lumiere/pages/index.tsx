@@ -21,11 +21,11 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <div className={styles.card}>
+          <div className={styles.watchedCard}>
             <h2>La La Land &rarr;</h2>
           </div>
 
-          <div className={styles.card}>
+          <div className={styles.watchedCard}>
             <h2>Whiplash &rarr;</h2>
           </div>
 
