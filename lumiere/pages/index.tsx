@@ -40,6 +40,10 @@ const Home: NextPage = () => {
           <div className={styles.card}>
             <h2>Baby Driver</h2>
           </div>
+
+          <div className={styles.card}>
+            <h2>Jurassic Park</h2>
+          </div>
           
         </div>
       </main>
