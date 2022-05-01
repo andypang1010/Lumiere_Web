@@ -10,7 +10,6 @@ const Home: NextPage = () => {
         <title>Lumiere</title>
         <meta name="description" content="Created by Andy Pang & Porridge Zou" />
         <link rel="icon" href="/favicon.ico" />
-        
       </Head>
 
       <main className={styles.main}>
