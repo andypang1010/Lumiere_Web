@@ -37,11 +37,7 @@ const Home: NextPage = () => {
              <div className={styles.card}>
                <h2>A Dog&#39;s Purpose</h2>
              </div>
-
-
-          <div className={styles.card}>
-            <h2>A Dog&#39;s Purpose</h2>
-          </div>
+             
           <div className={styles.card}>
             <h2>A Quiet Place</h2>
           </div>
