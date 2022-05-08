@@ -1,5 +1,5 @@
-import { Stack, HStack, VStack, SimpleGrid, Box } from '@chakra-ui/react'
-import { Heading, Text } from "@chakra-ui/react"
+import {VStack, SimpleGrid, Box } from '@chakra-ui/react'
+import { Text } from "@chakra-ui/react"
 import React from 'react'
 
 const TwoColumns=()=>(
