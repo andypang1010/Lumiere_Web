@@ -1,70 +1,19 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import { Dict } from "@chakra-ui/utils"
-import 'bootstrap/dist/css/bootstrap.css';
+import { Heading, Text } from "@chakra-ui/react"
+import Footer from "../components/layout/Footer"
+import Layout from "../components/layout/Layout"
+import TextWithName from "../components/layout/TextWithName"
+import TwoColumns from "../components/layout/TwoColumns"
 
-const Home: NextPage = () => {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Lumiere</title>
-        <meta name="description" content="Created by Andy Pang & Porridge Zou" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+const IndexPage = () => (
+  <Layout title="Lumiere">
+        <Heading my='4' size='4xl' textAlign='center' textColor='twitter.900'>
+            Lumiere
+        </Heading>
+        <TextWithName name="KingBob"></TextWithName>
+        <TwoColumns></TwoColumns>
+    </Layout>
+    
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Lumiere
-        </h1>
+)
 
-        <p className={styles.description}>
-          Welcome, kingbob001
-        </p>
-
-        <div className={styles.grid}></div>
-        <div className='row'>
-          <div className='col-lg-6 gx-7'>
-             <div className={styles.watchedCard}>
-               <Checkbox
-               <h2>La La Land &rarr;</h2>
-             </div>
-      
-             <div className={styles.watchedCard}>
-               <h2>Whiplash &rarr;</h2>
-             </div>
-          </div>
-
-          <div className='col-lg-6 gx-7'>
-             <div className={styles.card}>
-               <h2>A Dog&#39;s Purpose</h2>
-             </div>
-             
-          <div className={styles.card}>
-            <h2>A Quiet Place</h2>
-          </div>
-
-          <div className={styles.card}>
-            <h2>Baby Driver</h2>
-          </div>
-
-          <div className={styles.card}>
-            <h2>Jurassic Park</h2>
-          </div>
-          </div></div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://github.com/andypang1010/INFO_1998_Final_Project"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Created by Andy Pang & Porridge Zou
-        </a>
-      </footer>
-    </div>
-  )
-}
-
-export default Home
+export default IndexPage
