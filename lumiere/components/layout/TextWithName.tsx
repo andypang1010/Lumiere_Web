@@ -1,14 +1,14 @@
-import React, { ReactNode } from "react"
-import { Heading, Text } from "@chakra-ui/react"
-import { User } from "../../types/types"
+import React from "react"
+import { Text } from "@chakra-ui/react"
 
 type Props = {
-    name: String
+    readonly username: String
+    readonly name: String
   }
 
-const TextWithName=({ name }:Props) => (
-    <Text textAlign='center' textColor='#a2a2a2'>
-    Welcome, {name}!
+const TextWithName=({ name, username } : Props) => (
+  <Text textAlign='center' textColor='#797979'>
+    Welcome, <b>{name}</b> (<i>{username}</i>)!
   </Text>
   )
 

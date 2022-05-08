@@ -4,9 +4,11 @@ import React from "react"
 const Footer = () => (
   <Box as="footer" px={4}>
     <Divider my={4} />
-    <Text fontSize="sm" color="subtle">
-      Created by Andy Pang (cp487) and Haoxuan Porridge Zou (hz252)
-    </Text>
+    <a href = "https://github.com/andypang1010/Lumiere">
+      <Text fontSize="medium" color="subtle" textAlign="center">
+        Created by Andy Pang (cp487) & Haoxuan Porridge Zou (hz252)
+      </Text>
+    </a>
   </Box>
 )
 
