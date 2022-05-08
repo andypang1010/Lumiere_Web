@@ -66,7 +66,7 @@
   text-decoration: none;
   border-radius: 10px;
   border-color: #a2a2a2;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  /* transition: color 0.5 ease, border-color 0.5 ease; */
   width: 100%;
 }
 
@@ -78,7 +78,7 @@
   text-decoration: none;
   border-radius: 10px;
   border-color: #C0A080;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  /* transition: color 0.15s ease, border-color 0.15s ease; */
   width: 100%;
 }
 
@@ -87,6 +87,17 @@
 .card:active {
   background-color: #6c6c6c;
   border-color: #6c6c6c;
+  transition: 0.5s;
+  /* opacity: 1; */
+}
+
+.watchedCard:hover,
+.watchedCard.focus,
+.watchedCard.active {
+  background-color: #b07539;
+  border-color: #b07539;
+  /* opacity: 1; */
+  transition: 0.5s;
 }
 
 .card h2 {
