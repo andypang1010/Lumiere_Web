@@ -2,7 +2,7 @@ import {VStack, SimpleGrid, Box } from '@chakra-ui/react'
 import { Text } from "@chakra-ui/react"
 import React from 'react'
 
-const TwoColumns=()=>(
+const TwoColumns=() => (
     <SimpleGrid columns={2} spacing={10}>
         <VStack>  
             <Text>hello</Text>

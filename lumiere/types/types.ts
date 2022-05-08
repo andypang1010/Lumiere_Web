@@ -17,3 +17,8 @@ export type UnwatchedMovie = {
 export type UnwatchedMovieWithID = UnwatchedMovie & {
   id: string
 }
+
+export type User = {
+  username: string
+  name: string
+}
