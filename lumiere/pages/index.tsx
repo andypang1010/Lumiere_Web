@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { Dict } from "@chakra-ui/utils"
 import 'bootstrap/dist/css/bootstrap.css';
 
 const Home: NextPage = () => {
@@ -25,6 +26,7 @@ const Home: NextPage = () => {
         <div className='row'>
           <div className='col-lg-6 gx-7'>
              <div className={styles.watchedCard}>
+               <Checkbox
                <h2>La La Land &rarr;</h2>
              </div>
       
