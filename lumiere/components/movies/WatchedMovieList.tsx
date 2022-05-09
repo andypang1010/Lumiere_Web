@@ -14,7 +14,7 @@ const MoviesList = ({ movies }: Props) => {
       {movies.length ? (
         movies.map((movie) => <WatchedMovieItem key={movie.id} movie={movie} />)
       ) : (
-        <Text>The list is looking kinda empty 👀</Text>
+        <Text>You need to watch some movies...</Text>
       )}
     </VStack>
   )
