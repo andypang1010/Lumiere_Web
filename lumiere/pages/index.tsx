@@ -5,8 +5,8 @@ import TextWithName from "../components/layout/TextWithName"
 import TwoColumns from "../components/layout/TwoColumns"
 import { db } from "../util/firebase";
 
-const userDocumentRef = doc(db, "Users", "kingbob1");
- const userSnapshot = getDoc(userDocumentRef);
+// const userDocumentRef = doc(db, "Users", "kingbob1");
+// const userSnapshot = await getDoc(userDocumentRef);
 
 function IndexPage() {
   return (
@@ -15,7 +15,7 @@ function IndexPage() {
           Lumiere
       </Heading>
 
-      <TextWithName name="Haoxuan" username={"hz252"}></TextWithName>
+      <TextWithName name="King Bob" username={"kingbob1"}></TextWithName>
 
       <TwoColumns></TwoColumns>
     </Layout>
