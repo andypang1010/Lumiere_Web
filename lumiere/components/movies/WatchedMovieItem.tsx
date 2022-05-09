@@ -1,21 +1,26 @@
 import { Text } from "@chakra-ui/react"
 import { useDisclosure, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter } from "@chakra-ui/react"
-import { deleteDoc } from "firebase/firestore"
+import { doc, updateDoc } from "firebase/firestore"
 import React from "react"
 import { WatchedMovieWithID } from "../../types/types"
+import { db } from "../../util/firebase"
 
 type Props = {
-  readonly movie:WatchedMovieWithID
+  readonly movie: WatchedMovieWithID
 }
 
 
-const WatchedMovieItem=({movie:{movieName,watchDate,rating,comment,isHeart,id}}:Props)=>{
+
+const WatchedMovieItem=({ movie: { id, movieName, watchDate, rating, comment, isHeart } }: Props) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
+  const likeMovie = async () => {
+    await updateDoc(doc(db, 'Users/'+{/*userID*/}+'/MovieesList', id), { isHeart: !isHeart });
+  }
 
     return(
 <>
-      <Button onClick={onOpen}>{movieName}</Button>
+      <Button onClick={onOpen}><b>{movieName}</b></Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
@@ -25,7 +30,7 @@ const WatchedMovieItem=({movie:{movieName,watchDate,rating,comment,isHeart,id}}:
           <ModalBody>
             <Text>
               Movie name: {movieName};
-              {watchDate}; {rating}; {comment}; {isHeart}; {id}
+              <u>{watchDate}</u>; <b>{rating}</b>; {comment}; {isHeart}; {id}
             </Text>
           </ModalBody>
 
