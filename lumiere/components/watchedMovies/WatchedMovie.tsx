@@ -5,13 +5,13 @@ import { WatchedMovie, WatchedMovieWithID } from "../../types/types"
 import { db } from "../../util/firebase"
 import WatchedMovieList from "./WatchedMovieList"
 
-const movieQuery = query(collection(db, 'Users/'+{/*username*/}+"/MoviesList"))
+const moviesQuery = query(collection(db, "Users/kingbob1/MoviesList"));
 
 const WatchedMovie = () => {
   const [watchedMovies, setMovies] = useState<WatchedMovieWithID[] | null>(null)
 
   useEffect(() => {
-    const unsubscribe = onSnapshot(movieQuery, (querySnapshot) => {
+    const unsubscribe = onSnapshot(moviesQuery, (querySnapshot) => {
       const watchedMovies = querySnapshot.docs.map((movie) => movie.data() as WatchedMovie);
       const ids = querySnapshot.docs.map((movie) => movie.id);
       const watchedMoviesWithID = watchedMovies.map(movie => ({...movie, id: ids[watchedMovies.indexOf(movie)]}));

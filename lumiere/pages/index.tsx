@@ -1,21 +1,20 @@
 import { Heading } from "@chakra-ui/react"
-import { doc, getDoc, onSnapshot, QuerySnapshot } from "firebase/firestore";
+import { collection, doc, getDoc, onSnapshot, query, QuerySnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import Layout from "../components/layout/Layout"
 import TextWithName from "../components/layout/TextWithName"
 import TwoColumns from "../components/layout/TwoColumns"
 import { db } from "../util/firebase";
 
-// const userDocumentRef = doc(db, "Users", "kingbob1");
-// const userSnapshot = await getDoc(userDocumentRef);
-const queryName=query();//...
+const usersQuery = query(collection(db, "Users"));
 
 function IndexPage() {
-const [userName, setUserName]=useState<String>('');
+const [username, setUsername]=useState<String>('');
+
 useEffect(()=>{
-  const name=onSnapshot(queryName,(querySnapshot)=>{
-    const username="";//...
-    setUserName(username);
+  const unsubscribe = onSnapshot(usersQuery,(querySnapshot)=>{
+    const username = "blablabla"
+    setUsername(username);
   })
 
 })
@@ -26,7 +25,7 @@ useEffect(()=>{
           Lumiere
       </Heading>
 
-      <TextWithName name="King Bob" username={"kingbob1"}></TextWithName>
+      <TextWithName username={username}></TextWithName>
 
       <TwoColumns></TwoColumns>
     </Layout>
