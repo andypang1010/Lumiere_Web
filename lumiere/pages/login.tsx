@@ -8,7 +8,7 @@ const SignInPage = () => {
         <Button
             _focusVisible={{ shadow: "outline" }}
             _focus={{ shadow: "none" }}
-            colorScheme={"facebook"}
+            colorScheme={"whiteAlpha"}
             onClick={signInWithGoogle}
         >
             Sign In
