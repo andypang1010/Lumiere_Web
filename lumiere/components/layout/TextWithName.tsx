@@ -7,8 +7,8 @@ type Props = {
   }
 
 const TextWithName=({ name, username } : Props) => (
-  <Text textAlign='center' textColor='lightskyblue'>
-    Welcome, <span style={{color:'wheat'}}>{name}!</span> (<i>{username}</i>)
+  <Text textAlign='center' textColor='#797979'>
+    Welcome, <span style={{color:'#e3ae78'}}><b>{name}</b>!</span> (<i>{username}</i>)
   </Text>
 
   )

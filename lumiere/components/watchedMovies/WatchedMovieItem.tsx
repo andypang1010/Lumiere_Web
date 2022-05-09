@@ -15,7 +15,7 @@ const WatchedMovieItem=({ movie: { id, movieName, watchDate, rating, comment, is
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const likeMovie = async () => {
-    await updateDoc(doc(db, 'Users/'+{/*userID*/}+'/MovieesList', id), { isHeart: !isHeart });
+    await updateDoc(doc(db, 'Users/kingbob1/MovieesList', id), { isHeart: !isHeart });
   }
 
     return(
