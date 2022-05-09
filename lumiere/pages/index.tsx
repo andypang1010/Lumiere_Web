@@ -1,23 +1,24 @@
 import { Heading } from "@chakra-ui/react"
-import { collection, doc, getDoc, onSnapshot, query, QuerySnapshot } from "firebase/firestore";
+import { doc, getDoc, onSnapshot, QuerySnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import Layout from "../components/layout/Layout"
 import TextWithName from "../components/layout/TextWithName"
 import TwoColumns from "../components/layout/TwoColumns"
 import { db } from "../util/firebase";
 
-const usersQuery = query(collection(db, "Users"));
+// const userDocumentRef = doc(db, "Users", "kingbob1");
+// const userSnapshot = await getDoc(userDocumentRef);
+// const queryName=query();
 
 function IndexPage() {
-const [username, setUsername]=useState<String>('');
+const [userName, setUserName]=useState<String>('kingBob');
+// useEffect(()=>{
+//   const name=onSnapshot(queryName,(querySnapshot)=>{
+//     const username="";//...
+//     setUserName(username);
+//   })
 
-useEffect(()=>{
-  const unsubscribe = onSnapshot(usersQuery,(querySnapshot)=>{
-    const username = "blablabla"
-    setUsername(username);
-  })
-
-})
+// })
 
   return (
     <Layout title="Lumiere">
@@ -25,7 +26,7 @@ useEffect(()=>{
           Lumiere
       </Heading>
 
-      <TextWithName username={username}></TextWithName>
+      <TextWithName username={userName}></TextWithName>
 
       <TwoColumns></TwoColumns>
     </Layout>
