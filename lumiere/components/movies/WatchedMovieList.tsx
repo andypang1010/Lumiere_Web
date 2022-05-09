@@ -5,14 +5,14 @@ import WatchedMovieItem from "./WatchedMovieItem"
 
 
 type Props = {
-  readonly tasks: WatchedMovieWithID[]
+  readonly movies: WatchedMovieWithID[]
 }
 
-const TaskList = ({ tasks }: Props) => {
+const TaskList = ({ movies }: Props) => {
   return (
     <VStack>
-      {tasks.length ? (
-        tasks.map((task) => <WatchedMovieItem key={task.id} movie={task} />)
+      {movies.length ? (
+        movies.map((movie) => <WatchedMovieItem key={movie.id} movie={movie} />)
       ) : (
         <Text>The list is looking kinda empty 👀</Text>
       )}
