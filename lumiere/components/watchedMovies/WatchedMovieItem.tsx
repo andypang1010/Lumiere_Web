@@ -20,7 +20,7 @@ const WatchedMovieItem=({ movie: { id, movieName, watchDate, rating, comment, is
 
     return(
 <>
-      <Button onClick={onOpen}><b>{movieName}</b></Button>
+      <Button onClick={onOpen} colorScheme={isHeart?'pink':'facebook'}><b>{movieName}</b></Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
@@ -28,6 +28,7 @@ const WatchedMovieItem=({ movie: { id, movieName, watchDate, rating, comment, is
           <ModalHeader>Modal Title</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
+
             <Text>
               Movie name: {movieName};
               <u>{watchDate}</u>; <b>{rating}</b>; {comment}; {isHeart}; {id}
@@ -38,7 +39,7 @@ const WatchedMovieItem=({ movie: { id, movieName, watchDate, rating, comment, is
             <Button colorScheme='blue' mr={3} onClick={onClose}>
               Close
             </Button>
-            <Button variant='ghost'>Secondary Action</Button>
+            <Button colorScheme='whatsapp' onClick={likeMovie}>Like It!</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
