@@ -6,7 +6,7 @@ import { db } from "../../util/firebase"
 const movieQuery = query(collection(db, 'Users/'+{/*username*/}+"/MoviesList"))
 
 const WatchedMovie = () => {
-  const [movies, setMovies] = useState<WatchedMovieWithID[] | null>(null)
+  const [watchedMovies, setMovies] = useState<WatchedMovieWithID[] | null>(null)
 
   useEffect(() => {
     const unsubscribe = onSnapshot(movieQuery, (querySnapshot) => {
