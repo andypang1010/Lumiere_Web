@@ -6,7 +6,7 @@ import WatchedMovie from '../watchedMovies/WatchedMovie'
 const TwoColumns=() => (
     <SimpleGrid columns={2} spacing={10}>
         <WatchedMovie></WatchedMovie>
-        <VStack>  
+        <VStack>
         <Text>hello</Text>
         <Text>hello</Text>
         <Text>hello</Text>
