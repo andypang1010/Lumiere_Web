@@ -1,4 +1,4 @@
-import { Heading } from "@chakra-ui/react"
+import { Divider, Heading } from "@chakra-ui/react"
 import { doc, getDoc, onSnapshot, QuerySnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import Layout from "../components/layout/Layout"
@@ -27,7 +27,7 @@ const [userName, setUserName]=useState<String>('kingBob');
       </Heading>
 
       <TextWithName username={userName}></TextWithName>
-
+      <Divider></Divider>
       <TwoColumns></TwoColumns>
     </Layout>
   )
