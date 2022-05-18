@@ -19,26 +19,25 @@ const AddButton=()=>{
             <ModalCloseButton />
             <ModalBody pb={6}>
               <FormControl>
-                <FormLabel>Movie Name:</FormLabel>
-                <Input placeholder='Movie Name Here' />
+                <FormLabel>Title:</FormLabel>
+                <Input/>
               </FormControl>
+
               <FormControl>
-                <FormLabel>Movie Name:</FormLabel>
-                <Input placeholder='Movie name here' />
+                <FormLabel>Date:</FormLabel>
+                <Input placeholder='MM/DD/YYYY' />
               </FormControl>
+
               <FormControl>
-                <FormLabel>Watch Date:</FormLabel>
-                <Input placeholder='When did you watch that movie?' />
+                <FormLabel>Rating:</FormLabel>
+                <Input placeholder='0.0-10.0' />
               </FormControl>
   
               <FormControl mt={4}>
-                <FormLabel>How would you rate this movie?</FormLabel>
-                <Input placeholder='Rating...' />
+                <FormLabel>Comment:</FormLabel>
+                <Input/>
               </FormControl>
-              <FormControl>
-                <FormLabel>Your comment:</FormLabel>
-                <Input placeholder='Any comments after watching it?' />
-              </FormControl>
+
             </ModalBody>
   
             <ModalFooter>
