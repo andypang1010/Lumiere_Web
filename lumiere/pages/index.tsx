@@ -34,8 +34,8 @@ const { user, loading } = useAuth()
               <TextWithName username={userName}></TextWithName>
               <Divider></Divider>
               <TwoColumns></TwoColumns>
-              <Button onClick={signOutFirebase}>hello</Button>
               <Footer />
+              <Button onClick={signOutFirebase}>Sign Out</Button>
               </>
         ) : (
           <><Heading my='4' size='4xl' textAlign='center' textColor="#495997">
