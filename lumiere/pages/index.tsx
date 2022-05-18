@@ -4,7 +4,7 @@ import { useAuth } from "../components/auth/AuthUserProvider";
 import Footer from "../components/layout/Footer";
 import Layout from "../components/layout/Layout"
 import TextWithName from "../components/layout/TextWithName"
-import TwoColumns from "../components/layout/TwoColumns"
+import MoviesColumn from "../components/layout/MoviesColumn"
 import { db, signInWithGoogle, signOutFirebase } from "../util/firebase";
 
 // const userDocumentRef = doc(db, "Users", "kingbob1");
@@ -33,7 +33,7 @@ const { user, loading } = useAuth()
               </Heading>
               <TextWithName username={userName}></TextWithName>
               <Divider></Divider>
-              <TwoColumns></TwoColumns>
+              <MoviesColumn></MoviesColumn>
               <Footer />
               <Button onClick={signOutFirebase}>Sign Out</Button>
               </>
