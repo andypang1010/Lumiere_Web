@@ -32,7 +32,7 @@ const { user, loading } = useAuth()
           <><Heading my='4' size='4xl' textAlign='center' textColor="#495997">
                 Lumiere
               </Heading>
-              <GreetUser username={username}></GreetUser>
+              <GreetUser username={user.displayName!}></GreetUser>
               <Divider></Divider>
               <MoviesColumn></MoviesColumn>
               <Footer />
