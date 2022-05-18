@@ -7,7 +7,7 @@ const AddButton=()=>{
 
     return (
         <>
-        <Button onClick={onOpen}>Add a movie</Button>
+        <Button onClick={onOpen} >Add a movie</Button>
   
         <Modal
           isOpen={isOpen}
