@@ -7,7 +7,7 @@ const AddButton=()=>{
 
     return (
         <>
-        <Button onClick={onOpen}>Open Modal</Button>
+        <Button onClick={onOpen}>Add a movie</Button>
   
         <Modal
           isOpen={isOpen}
@@ -15,23 +15,35 @@ const AddButton=()=>{
         >
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>Create your account</ModalHeader>
+            <ModalHeader>Add a movie you watched!</ModalHeader>
             <ModalCloseButton />
             <ModalBody pb={6}>
               <FormControl>
-                <FormLabel>First name</FormLabel>
-                <Input placeholder='First name' />
+                <FormLabel>Movie Name:</FormLabel>
+                <Input placeholder='Movie Name Here' />
+              </FormControl>
+              <FormControl>
+                <FormLabel>Movie Name:</FormLabel>
+                <Input placeholder='Movie name here' />
+              </FormControl>
+              <FormControl>
+                <FormLabel>Watch Date:</FormLabel>
+                <Input placeholder='When did you watch that movie?' />
               </FormControl>
   
               <FormControl mt={4}>
-                <FormLabel>Last name</FormLabel>
-                <Input placeholder='Last name' />
+                <FormLabel>How would you rate this movie?</FormLabel>
+                <Input placeholder='Rating...' />
+              </FormControl>
+              <FormControl>
+                <FormLabel>Your comment:</FormLabel>
+                <Input placeholder='Any comments after watching it?' />
               </FormControl>
             </ModalBody>
   
             <ModalFooter>
               <Button colorScheme='blue' mr={3}>
-                Save
+                Add
               </Button>
               <Button onClick={onClose}>Cancel</Button>
             </ModalFooter>
