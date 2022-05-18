@@ -37,6 +37,9 @@ const createComponentWithAuth = withFirebaseAuth({
 const signInWithGoogle = () => {
   signInWithPopup(auth, providers.googleProvider)
 }
+const signOutWithGoogle=()=>{
+  signOut(auth)
+}
 
 const signOutFirebase = () => {
   signOut(auth)
@@ -47,5 +50,5 @@ export {
   auth,
   createComponentWithAuth,
   signInWithGoogle,
-  signOutFirebase as signOut,
+  signOutFirebase,
 }

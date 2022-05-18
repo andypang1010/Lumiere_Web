@@ -18,7 +18,7 @@ const Layout = ({ children, title }: Props) => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Container my={6}>{children}</Container>
-    <Footer />
+
   </div>
 )
 
