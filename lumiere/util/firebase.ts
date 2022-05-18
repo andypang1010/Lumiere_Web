@@ -1,4 +1,4 @@
-import { initializeApp, getApps, getApp } from "firebase/app"
+import { initializeApp, getApps, getApp, FirebaseError } from "firebase/app"
 import { getFirestore } from "firebase/firestore"
 import {
   getAuth,
@@ -35,7 +35,12 @@ const createComponentWithAuth = withFirebaseAuth({
 })
 
 const signInWithGoogle = () => {
-  signInWithPopup(auth, providers.googleProvider)
+  try {
+    signInWithPopup(auth, providers.googleProvider)
+  } catch (FirebaseError) {
+    console.log(FirebaseError)
+  }//no use. don't know how to handle the pop up cancelled error.
+
 }
 const signOutWithGoogle=()=>{
   signOut(auth)
