@@ -7,11 +7,7 @@ const AddButton=()=>{
 
     return (
         <>
-<<<<<<< Updated upstream
         <Button onClick={onOpen}>Add a movie</Button>
-=======
-        <Button onClick={onOpen}>Add Movie</Button>
->>>>>>> Stashed changes
   
         <Modal
           isOpen={isOpen}
@@ -19,7 +15,6 @@ const AddButton=()=>{
         >
           <ModalOverlay />
           <ModalContent>
-<<<<<<< Updated upstream
             <ModalHeader>Add a movie you watched!</ModalHeader>
             <ModalCloseButton />
             <ModalBody pb={6}>
@@ -43,40 +38,12 @@ const AddButton=()=>{
               <FormControl>
                 <FormLabel>Your comment:</FormLabel>
                 <Input placeholder='Any comments after watching it?' />
-=======
-            <ModalHeader>Add Movie</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody pb={6}>
-              <FormControl>
-                <FormLabel>Title</FormLabel>
-                <Input placeholder='Movie name' />
-              </FormControl>
-  
-              <FormControl mt={4}>
-                <FormLabel>Date</FormLabel>
-                <Input placeholder='Date (MM/DD/YYYY)' />
-              </FormControl>
-
-              <FormControl mt={4}>
-                <FormLabel>Rating</FormLabel>
-                <Input placeholder='Rating (0.0-10.0)' />
-              </FormControl>
-
-              <FormControl mt={4}>
-                <FormLabel>Comment</FormLabel>
-                <Input placeholder='Comment' />
->>>>>>> Stashed changes
               </FormControl>
             </ModalBody>
   
             <ModalFooter>
-<<<<<<< Updated upstream
-              <Button colorScheme='blue' mr={3}>
-                Add
-=======
               <Button backgroundColor={'#e3ae78'} mr={3}>
                 Save
->>>>>>> Stashed changes
               </Button>
               <Button onClick={onClose}>Cancel</Button>
             </ModalFooter>
