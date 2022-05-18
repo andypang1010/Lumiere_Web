@@ -1,5 +1,6 @@
-import { Box, Divider, Text, VStack } from "@chakra-ui/react"
+import { Box, Button, Divider, Spinner, Text, VStack } from "@chakra-ui/react"
 import React from "react"
+import { signInWithGoogle } from "../../util/firebase"
 import AddButton from "./AddButton"
 
 const Footer = () => (
