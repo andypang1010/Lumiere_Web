@@ -1,4 +1,4 @@
-import { Button, FormControl, FormLabel, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure } from "@chakra-ui/react";
+import { Button, FormControl, FormLabel, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, NumberDecrementStepper, NumberIncrementStepper, NumberInput, NumberInputField, NumberInputStepper, Textarea, useDisclosure } from "@chakra-ui/react";
 import React from "react";
 
 const AddButton=()=>{
@@ -7,13 +7,13 @@ const AddButton=()=>{
 
     return (
         
-        <><Button onClick={onOpen}>Add a movie</Button><Modal
+        <><Button colorScheme={"facebook"} onClick={onOpen}>Add Movie</Button><Modal
             isOpen={isOpen}
             onClose={onClose}
         >
             <ModalOverlay />
             <ModalContent>
-                <ModalHeader>Add a movie you watched!</ModalHeader>
+                <ModalHeader>Add Movie</ModalHeader>
                 <ModalCloseButton />
                 <ModalBody pb={6}>
                     <FormControl>
@@ -21,19 +21,26 @@ const AddButton=()=>{
                         <Input />
                     </FormControl>
 
-                    <FormControl>
-                        <FormLabel>Date:</FormLabel>
+                    <FormControl mt={4}>
+                        <FormLabel>Date Watched:</FormLabel>
                         <Input placeholder='MM/DD/YYYY' />
                     </FormControl>
 
-                    <FormControl>
+                    <FormControl mt={4}>
                         <FormLabel>Rating:</FormLabel>
-                        <Input placeholder='0.0-10.0' />
+                        <NumberInput step={0.1} defaultValue={0.0} min={0.0} max={10.0} precision={1} placeholder={'0.0-10.0'}>
+                            <NumberInputField />
+                            <NumberInputStepper>
+                                <NumberIncrementStepper />
+                                <NumberDecrementStepper />
+                            </NumberInputStepper>
+                        </NumberInput>
                     </FormControl>
+
 
                     <FormControl mt={4}>
                         <FormLabel>Comment:</FormLabel>
-                        <Input />
+                        <Textarea/>
                     </FormControl>
 
                 </ModalBody>
