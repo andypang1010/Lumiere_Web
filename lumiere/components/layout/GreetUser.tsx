@@ -5,11 +5,11 @@ type Props = {
     readonly username: String
   }
 
-const TextWithName=({ username } : Props) => (
+const GreetUser = ({ username } : Props) => (
   <Text textAlign='center' textColor='#797979'>
     Welcome, <span style={{color:'#e3ae78'}}><b>{username}</b>!</span>
   </Text>
 
   )
 
-export default TextWithName
+export default GreetUser

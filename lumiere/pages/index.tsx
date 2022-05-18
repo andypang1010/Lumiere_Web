@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useAuth } from "../components/auth/AuthUserProvider";
 import Footer from "../components/layout/Footer";
 import Layout from "../components/layout/Layout"
-import TextWithName from "../components/layout/TextWithName"
+import GreetUser from "../components/layout/GreetUser"
 import MoviesColumn from "../components/layout/MoviesColumn"
 import { db, signInWithGoogle, signOutFirebase } from "../util/firebase";
 
@@ -31,7 +31,7 @@ const { user, loading } = useAuth()
           <><Heading my='4' size='4xl' textAlign='center' textColor="#495997">
                 Lumiere
               </Heading>
-              <TextWithName username={userName}></TextWithName>
+              <GreetUser username={userName}></GreetUser>
               <Divider></Divider>
               <MoviesColumn></MoviesColumn>
               <Footer />
