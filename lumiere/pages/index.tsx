@@ -6,13 +6,13 @@ import Layout from "../components/layout/Layout"
 import GreetUser from "../components/layout/GreetUser"
 import MoviesColumn from "../components/layout/MoviesColumn"
 import { db, signInWithGoogle, signOutFirebase } from "../util/firebase";
+import { doc, getDoc, query } from "firebase/firestore";
 
 // const userDocumentRef = doc(db, "Users", "kingbob1");
 // const userSnapshot = await getDoc(userDocumentRef);
-// const queryName=query();
 
 function IndexPage() {
-const [username, setUsername]=useState<String>('kingBob');
+const [username, setUsername]=useState<String>('bob');
 
 // useEffect(()=>{
 //   const name = onSnapshot(queryName,(querySnapshot)=>{
@@ -32,24 +32,24 @@ const { user, loading } = useAuth()
           <><Heading my='4' size='4xl' textAlign='center' textColor="#495997">
                 Lumiere
               </Heading>
-              <GreetUser username={user.displayName!}></GreetUser>
+              <GreetUser username={user.displayName}></GreetUser>
               <Divider></Divider>
               <MoviesColumn></MoviesColumn>
               <Footer />
               <Button onClick={signOutFirebase}>Sign Out</Button>
               </>
         ) : (
-          <><Heading my='4' size='4xl' textAlign='center' textColor="#495997">
-          Lumiere
-        </Heading>
+          <>
+          <Heading my='4' size='4xl' textAlign='center' textColor="#495997">Lumiere</Heading>
           <Button
-                  _focusVisible={{ shadow: "outline" }}
-                  _focus={{ shadow: "none" }}
-                  colorScheme={"facebook"}
-                  onClick={signInWithGoogle}
-                >
-                  Sign In
-                </Button></>
+            _focusVisible={{ shadow: "outline" }}
+            _focus={{ shadow: "none" }}
+            colorScheme={"facebook"}
+            onClick={signInWithGoogle}
+          >
+          Sign In
+          </Button>
+        </>
         )}
       </VStack>
     </Layout></>
