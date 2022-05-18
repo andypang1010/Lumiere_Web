@@ -12,14 +12,15 @@ import { db, signInWithGoogle, signOutFirebase } from "../util/firebase";
 // const queryName=query();
 
 function IndexPage() {
-const [userName, setUserName]=useState<String>('kingBob');
-// useEffect(()=>{
-//   const name=onSnapshot(queryName,(querySnapshot)=>{
-//     const username="";//...
-//     setUserName(username);
-//   })
+const [username, setUsername]=useState<String>('kingBob');
 
+// useEffect(()=>{
+//   const name = onSnapshot(queryName,(querySnapshot)=>{
+//     const username="";
+//     setUsername(username);
+//   })
 // })
+
 const { user, loading } = useAuth()
   return (
   <>
@@ -31,7 +32,7 @@ const { user, loading } = useAuth()
           <><Heading my='4' size='4xl' textAlign='center' textColor="#495997">
                 Lumiere
               </Heading>
-              <GreetUser username={userName}></GreetUser>
+              <GreetUser username={username}></GreetUser>
               <Divider></Divider>
               <MoviesColumn></MoviesColumn>
               <Footer />
