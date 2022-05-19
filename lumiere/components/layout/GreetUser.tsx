@@ -6,8 +6,10 @@ type Props = {
   }
 
 const GreetUser = ({ username } : Props) => (
-  <Text textAlign='center' textColor='#797979'>
-    Welcome, <span style={{color:'#e3ae78'}}><b>{username}</b></span>!
+  <Text textAlign='center' textColor={"subtle"}>
+    <i>
+      Welcome, <span style={{color:"#e3ae78"}}><b><u>{username}</u></b></span>
+    </i>
   </Text>
 
   )

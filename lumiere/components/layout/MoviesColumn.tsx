@@ -1,10 +1,10 @@
 import { SimpleGrid } from '@chakra-ui/react'
 import React from 'react'
-import WatchedMovie from '../watchedMovies/WatchedMovie'
+import Movie from '../watchedMovies/Movie'
 
 const MoviesColumn=() => (
     <SimpleGrid columns={1} spacing={10}>
-        <WatchedMovie></WatchedMovie>
+        <Movie></Movie>
     </SimpleGrid>
 )
 

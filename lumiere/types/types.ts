@@ -1,20 +1,11 @@
-export type WatchedMovie = {
-  movieName: string
-  watchDate: boolean
+export type Movie = {
+  title: string
+  date: string
   rating: number
   comment: string
-  isHeart: boolean
 }
 
-export type WatchedMovieWithID = WatchedMovie & {
-  id: string
-}
-
-export type UnwatchedMovie = {
-  movieName: string
-}
-
-export type UnwatchedMovieWithID = UnwatchedMovie & {
+export type MovieWithID = Movie & {
   id: string
 }
 
