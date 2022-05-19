@@ -21,7 +21,7 @@ function IndexPage() {
         ) : user ? (
           <>
             <Heading my='4' size='4xl' textAlign='center' textColor={"#3f5793"}>Lumiere</Heading>
-            <GreetUser username={user.email.substring(0,user.email.lastIndexOf("@"))}></GreetUser>
+            <GreetUser userID={user.email.substring(0,user.email.lastIndexOf("@"))} name={user.displayName}></GreetUser>
             <AddButton></AddButton>
 
             <Divider/>

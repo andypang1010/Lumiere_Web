@@ -2,14 +2,13 @@ import React from "react"
 import { Text } from "@chakra-ui/react"
 
 type Props = {
-    readonly username: String
+    readonly userID: String
+    readonly name: String
   }
 
-const GreetUser = ({ username } : Props) => (
+const GreetUser = ({ userID, name } : Props) => (
   <Text textAlign='center' textColor={"subtle"}>
-    <i>
-      Welcome, <span style={{color:"#e3ae78"}}><b><u>{username}</u></b></span>
-    </i>
+      Welcome, <b>{name}</b> ({<span style={{color:"#e3ae78"}}><b><u><i>{userID}</i></u></b></span>})
   </Text>
 
   )

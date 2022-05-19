@@ -10,12 +10,12 @@ const AddButton=()=>{
 
     const [titleInput, setTitleInput] = useState("")
     const [dateInput, setDateInput] = useState("")
-    const [ratingInput, setRatingInput] = useState(0.0)
+    const [ratingInput, setRatingInput] = useState(0.1)
     const [commentInput, setCommentInput] = useState("")
 
     const addMovie: FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault()
-        if (titleInput === "" || dateInput === "") return
+        if (titleInput === "" || dateInput === "" || ratingInput === 0.0) return
 
         const movie: Movie = {
             title: titleInput,
@@ -33,7 +33,7 @@ const AddButton=()=>{
 
         setTitleInput("")
         setDateInput("")
-        setRatingInput(0.0)
+        setRatingInput(0.1)
         setCommentInput("")
     }
 
@@ -57,7 +57,6 @@ const AddButton=()=>{
                                 <FormLabel>Title:</FormLabel>
                                 <Input 
                                     value={titleInput}
-                                    isRequired={true}
                                     type={"text"}
                                     onChange={(e) => setTitleInput(e.target.value)}
                                 />
@@ -68,7 +67,6 @@ const AddButton=()=>{
                                 <FormLabel>Date Watched:</FormLabel>
                                 <Input 
                                     value={dateInput}
-                                    isRequired={true}
                                     type={"date"}
                                     onChange={(e) => setDateInput(e.target.value)}
                                 />
@@ -80,8 +78,7 @@ const AddButton=()=>{
                                 <FormLabel>Rating:</FormLabel>
                                 <NumberInput 
                                     value={ratingInput}
-                                    isRequired={true}
-                                    min={0.0}
+                                    min={0.1}
                                     max={10.0}
                                     step={0.1}
                                     precision={1}
