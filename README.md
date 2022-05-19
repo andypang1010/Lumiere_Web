@@ -1,6 +1,6 @@
 # Lumiere
 
-Andy and Porridge's INFO 1998 Final Project for Spring 2022.
+Andy and Porridge's INFO 1998 Final Project for Spring 2022. We used React and HTML to build the website, using Chakra UI for styling, and Firebase as our backend database. This is a website that allows the user to store movies they have watched and give a personal rating and comment on the movie.
 
 <img width="1280" alt="Screen Shot 2022-05-19 at 03 15 27" src="https://user-images.githubusercontent.com/52476091/169232932-212ee7d3-5884-4215-9f76-cf137d63f228.png">
 
